@@ -21,6 +21,6 @@ app.use('/department', departmentRouter)
 app.use('/position', positionRouter)
 app.use('/employee', employeeRouter)
 
-app.listen(process.env.PORT, 'localhost', () => {
-    console.log('Server started on port 4000....')
+app.listen(process.env.PORT||4000 , 'localhost', () => {
+    console.log('Server started on port  4000....')
 })
