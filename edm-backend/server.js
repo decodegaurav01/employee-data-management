@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 
@@ -20,6 +21,6 @@ app.use('/department', departmentRouter)
 app.use('/position', positionRouter)
 app.use('/employee', employeeRouter)
 
-app.listen(4000, 'localhost', () => {
+app.listen(process.env.PORT, 'localhost', () => {
     console.log('Server started on port 4000....')
 })
