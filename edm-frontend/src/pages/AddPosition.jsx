@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { addPosition } from "../services/position"; 
-import {  getDepartments } from "../services/department"; 
+import { addPosition } from "../services/position";
+import { getDepartments } from "../services/department";
 import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
 
-export  function AddPosition() {
+export function AddPosition() {
     const [positionTitle, setPositionTitle] = useState("");
     const [departmentId, setDepartmentId] = useState("");
     const [departments, setDepartments] = useState([]);
@@ -27,7 +27,7 @@ export  function AddPosition() {
             return;
         }
 
-console.log("Submitting:", positionTitle, departmentId);
+        console.log("Submitting:", positionTitle, departmentId);
         const result = await addPosition(positionTitle, departmentId);
         if (result && result.status === "success") {
             toast.success("Position added successfully");
@@ -42,7 +42,7 @@ console.log("Submitting:", positionTitle, departmentId);
 
 
 
- return (
+    return (
         <div className=" flex justify-center items-center min-h-screen bg-gray-100 p-8">
             <div className="max-w-4xl mx-auto">
 
@@ -59,21 +59,21 @@ console.log("Submitting:", positionTitle, departmentId);
                     <div className="mb-8">
 
                     </div>
-                    <h2 className="text-2xl font-bold mb-6 text-center">Add Department</h2>
+                    <h2 className="text-2xl font-bold mb-6 text-center">Add Position</h2>
                     <div className="space-y-4">
 
-                    <select
-                        value={departmentId}
-                        onChange={(e) => setDepartmentId(e.target.value)}
-                        className="w-full border px-4 py-2 mb-4 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
-                    >
-                        <option value="">Select Department</option>
-                        {departments.map((dept) => (
-                            <option key={dept.id} value={dept.id}>
-                                {dept.name}
-                            </option>
-                        ))}
-                    </select>
+                        <select
+                            value={departmentId}
+                            onChange={(e) => setDepartmentId(e.target.value)}
+                            className="w-full border px-4 py-2 mb-4 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                        >
+                            <option value="">Select Department</option>
+                            {departments.map((dept) => (
+                                <option key={dept.id} value={dept.id}>
+                                    {dept.name}
+                                </option>
+                            ))}
+                        </select>
                         <input
                             type="text"
                             value={positionTitle}
@@ -82,13 +82,13 @@ console.log("Submitting:", positionTitle, departmentId);
                             className="w-full border px-4 py-2 mb-4 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
                         />
 
-                    <button
-                        onClick={handleSubmit}
-                        className="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition"
-                    >
-                        Add Position
-                    </button>
-                </div>
+                        <button
+                            onClick={handleSubmit}
+                            className="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition"
+                        >
+                            Add Position
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

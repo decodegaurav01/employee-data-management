@@ -261,7 +261,7 @@ export function Dashboard() {
                                                     className={`px-2 py-1 inline-flex text-xs font-semibold rounded-full 
                     ${emp.status === "Active"
                                                             ? "bg-green-100 text-green-800"
-                                                            : emp.status === "InActive"
+                                                            : emp.status === "Inactive"
                                                                 ? "bg-yellow-100 text-yellow-800"
                                                                 : "bg-red-200 text-red-800"
                                                         }`}

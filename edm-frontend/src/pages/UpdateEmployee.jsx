@@ -237,7 +237,7 @@ export function UpdateEmployee() {
                             >
                                 <option value="" disabled>Select status</option>
                                 <option value="Active">Active</option>
-                                <option value="InActive">InActive</option>
+                                <option value="Inactive">Inactive</option>
                                 <option value="Resigned">Resigned</option>
                                 <option value="Terminated">Terminated</option>
                             </select>
