@@ -34,7 +34,7 @@ cd employee-management-system
 cd edm_backend
 npm install
 ```
-### Database
+### Database connecton
 ```bash
 DB_HOST=localhost
 DB_USER=root
@@ -47,27 +47,27 @@ JWT_SECRET=your_SuperSecretKey
 
 ```
 
-# Start backent
+### Start backent
 ```bash
 npm start
 
-Backend runs at: http://localhost:4000
 ```
+#### Backend runs at: http://localhost:4000
 
-# DataBase Creation
+### DataBase Creation
 
 - Create a MySQL database named employee_db
 - Import  prepared SQL schema manually (tables for employees,  departments, positions, users).
 - Attached db.sql file
 
-# 2. Fronted Setup
-# Go into frontend/
-# Install dependencies:
+### 3. Fronted Setup
+#### Go into frontend/
+#### Install dependencies:
 ```bash
 cd ../edm-frontend
 npm install
 ```
-# Start Frontend
+### Start Frontend
 ```bash
 npm run dev
 
