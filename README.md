@@ -34,7 +34,8 @@ cd employee-management-system
 cd edm_backend
 npm install
 ```
-### Database connecton
+### 3.Database connection 
+#### Create a .env file inside emd_backend/:
 ```bash
 DB_HOST=localhost
 DB_USER=root
@@ -60,8 +61,8 @@ npm start
 - Import  prepared SQL schema manually (tables for employees,  departments, positions, users).
 - Attached db.sql file
 
-### 3. Fronted Setup
-#### Go into frontend/
+### 4. Fronted Setup
+#### Go into edm_frontend/
 #### Install dependencies:
 ```bash
 cd ../edm-frontend

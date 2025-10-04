@@ -22,42 +22,12 @@ router.post('/registration', (req, res) => {
         [company_name, email, encryptedPassword],
         (error, data) => {
             res.send(result.createResult(error, data))
-            // if (error) {
-            //     res.json({ status: 'error', message: error.message })
-            // } else {
-            //     res.json({ status: 'success', message: data })
-            // }
+          
         }
     )
 })
 
-// router.post('/login',(req ,res) =>{
-//     const {email , password} = req.body
-//     const encryptedPassword = String(cryptoJs.SHA256(password))
 
-//     console.log(encryptedPassword)
-
-//     const sql = `select * from users where email = ? and password = ?`
-
-//     pool.query(sql,[email,encryptedPassword],(error,data)=>{
-//         if(data){
-//             if(data.length!=0){
-//                 const payload ={
-//                     userId:data[0].id,
-//                 }
-//                 const token = jwt.sign(payload   ,config.secret)
-//                 const body ={
-//                     token:token,
-//                     company_name: data[0].company_name,
-//                     email:data[0].email,
-//                 }
-
-//                 res.send(result.createSuccessResult(body))
-//             }else 
-//                 res.send(result.createErrorResult('Invalid email or password'))
-//         }else res.send(result.createErrorResult(error))
-//     })
-// })
 router.post('/login', (req, res) => {
     const { email, password } = req.body;
     const encryptedPassword = String(cryptoJs.SHA256(password));
