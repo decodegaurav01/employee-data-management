@@ -74,8 +74,9 @@ npm install
 ```bash
 npm run dev
 
-Frontend runs at: http://localhost:5173
+
 ```
+#### Frontend runs at: http://localhost:5173
 
 ## 🎥 Video Walkthrough
 
