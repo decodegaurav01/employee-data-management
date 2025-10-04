@@ -40,9 +40,11 @@ npm install
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=your_password
-DB_NAME=employee_db
+DB_NAME=employee_d
+
 # Server configuration
 PORT=4000
+
 # JWT secret key
 JWT_SECRET=your_SuperSecretKey
 
