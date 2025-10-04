@@ -12,7 +12,7 @@ Employee Data Management is a tool designed to efficiently manage employee recor
 - Search and filter employees (including status filter)
 - Protected routes (only logged-in users can access dashboard & forms)
 - Secure API with JWT
-
+- All UI pages are responsive to multiple screens 
 
 ## 🛠️ Tech Stack
 - **Frontend:** React, React Router, Axios, TailwindCSS
